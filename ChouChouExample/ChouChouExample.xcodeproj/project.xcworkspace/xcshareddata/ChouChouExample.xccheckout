@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EC9AE041-D1B7-4D15-B600-03C8144860C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChouChouExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>47E55F5D-8A63-47D6-A68D-B060DC2E6596</key>
+		<string>http://gurlgitlab01.idc.mihindia.com/goibibo_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ChouChou-iOS/Example/ChouChouExample/ChouChouExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>47E55F5D-8A63-47D6-A68D-B060DC2E6596</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://gurlgitlab01.idc.mihindia.com/goibibo_ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>47E55F5D-8A63-47D6-A68D-B060DC2E6596</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47E55F5D-8A63-47D6-A68D-B060DC2E6596</string>
+			<key>IDESourceControlWCCName</key>
+			<string>gitlab_ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
