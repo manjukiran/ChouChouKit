@@ -42,6 +42,8 @@ typedef enum ChouChouErrorCode{
 @property (nonatomic, strong) NSException *exceptionDetail;
 @property (nonatomic, strong) NSError *errorDetail;
 @property (nonatomic, strong) NSHTTPURLResponse *urlResponse;
+@property (nonatomic, strong) NSString *userDislayErrorMsg;
+
 + (ChouChouError*)chouchouErrorWithDomain:(NSString *)domain code:(ChouChouErrorCode)code userInfo:(NSDictionary *)dict;
 + (ChouChouError*)chouchouErrorWithNetworkError:(NSError*)networkError;
 + (ChouChouError*)chouchouErrorWithUrlResponse:(NSHTTPURLResponse*)urlResponse;

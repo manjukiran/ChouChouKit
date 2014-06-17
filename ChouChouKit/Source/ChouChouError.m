@@ -64,5 +64,39 @@
     }
 }
 
+-(NSString*)userDislayErrorMsg{
+    if (_exceptionDetail) {
+        if (_exceptionDetail.description) {
+            return _exceptionDetail.description;
+        }
+        else if (_exceptionDetail.name) {
+            return _exceptionDetail.name;
+        }
+        else {
+            return @"Unknown exception";
+        }
+    }
+    else if(_errorDetail){
+        return [_errorDetail localizedDescription];
+    }
+    else if(_urlResponse){
+        return [NSHTTPURLResponse localizedStringForStatusCode:_urlResponse.statusCode];
+    }
+    else{
+        switch (self.code) {
+            case CHOU_ERR_PARAMS_INSUFFICIENT_DATA: return @"Format Error";
+            case CHOU_REACHABILITY_ISSUE: return @"Network unreachable, please try again";
+            case CHOU_ERR_NETWORK_URLRESPONSE: return [self localizedDescription];
+            case CHOU_ERR_CONN_UNABLE_TO_START: return @"Unable to establish connection";
+            case CHOU_ERR_CONNECTION: return @"Error while connecting";
+            case CHOU_ERR_JSON_EMPTY: return @"Invalid server response";
+            case CHOU_LOCAL_STORAGE_UNAVAILABLE: return @"Local Error: LSU";
+            case CHOU_LOCAL_WRITING_FAILURE: return @"Local Error: LWF";
+            case CHOU_LOCAL_DATA_UNAVAILABLE: return @"Local Error: LDU";
+            default: return @"Unknown Error while processing your request";
+        }
+    }
+}
+
 @end
 

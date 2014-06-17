@@ -194,9 +194,18 @@
     BOOL matchFound = YES;
     
     for(NSString *sourceKey in sourceDict.allKeys){
-        if(![sourceDict[sourceKey] isEqualToString:destDict[sourceKey]]){
-            matchFound = NO;
-            break;
+        if(![sourceDict[sourceKey] isKindOfClass:[destDict[sourceKey] class]]){
+            
+        }
+        if([sourceDict[sourceKey] isKindOfClass:[NSNumber class]]){
+            if(![sourceDict[sourceKey] isEqualToNumber:destDict[sourceKey]]){
+                matchFound = NO;
+            }
+        }else if([sourceDict[sourceKey] isKindOfClass:[NSString class]]){
+            if(![sourceDict[sourceKey] isEqualToString:destDict[sourceKey]]){
+                matchFound = NO;
+                break;
+            }
         }
     }
     return matchFound;

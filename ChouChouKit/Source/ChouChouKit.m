@@ -184,50 +184,56 @@ static ChouChouKit *_chouInstance = nil;
                             forError:(ChouChouError*)forError
                               onDone:(void (^)())onDone{
     //Store it locally if needed. Will sync it later
-    @try {
-        if(storeLocally && self.offlineDataManager && forError.domain && [forError.domain isEqualToString:kChouChouReachabilityIssueDomain]){
-            [self.offlineDataManager updateDocWithData:resourceName idDictionary:idDict withProperties:updateDict onError:^(ChouChouError* error){
+    if(storeLocally && self.offlineDataManager!=nil){
+        @try {
+            if(([forError.domain isEqualToString:kChouChouReachabilityIssueDomain]) || ([forError.domain isEqualToString:@"NSURLErrorDomain"])){
+                
+                [self.offlineDataManager updateDocWithData:resourceName idDictionary:idDict withProperties:updateDict onError:^(ChouChouError* error){
+                    if (onDone) {
+                        onDone();
+                    }
+                }onSuccess:^(NSDictionary* dataDict){
+                    if (onDone) {
+                        onDone();
+                    }
+                }];
+            }
+            
+            else{
                 if (onDone) {
                     onDone();
                 }
-            }onSuccess:^(NSDictionary* dataDict){
-                if (onDone) {
-                    onDone();
-                }
-            }];
-        }
-        else{
-            if (onDone) {
-                onDone();
             }
         }
-    }
-    @catch (NSException *exception) {
-        onDone();
+        @catch (NSException *exception) {
+            onDone();
+        }
+        
     }
 }
+
 
 -(void)getLocalDataBecauseOfNetworkErrorAndCleanUp:(ChouChouError*)networkError resourceName:(NSString*)resourceName withProperties:(NSDictionary*)propertiesDic onError:(void (^)(ChouChouError*))onError dataOffline:(void (^)(id))dataOffline
 {
     if(self.offlineDataManager){
         [self.offlineDataManager getDocWithData:resourceName withProperties:propertiesDic onError:^(ChouChouError* error){
-            if(onError){
-                onError(error);
-            }
+//            if(onError){
+//                onError(error);
+//            }
         } onSuccess:^(NSArray* dataArray){
             if(dataOffline){
                 dataOffline(dataArray);
             }
-            if(onError){
-                onError(networkError);
-            }
+//            if(onError){
+//                onError(networkError);
+//            }
         }];
     }
-    else{
-        if(onError){
+//    else{
+        if(onError && networkError){
             onError(networkError);
         }
-    }
+//    }
 //    Clean up
 //    _connectionActive = nil;
 }
@@ -371,15 +377,14 @@ static ChouChouKit *_chouInstance = nil;
         } onJsonIssue:^(ChouChouError *jsonError){
             [self getLocalDataBecauseOfNetworkErrorAndCleanUp:jsonError resourceName:resourceName withProperties:propertiesDic onError:onError dataOffline:dataOffline];
         } onSuccessFinish:^(id data) {
-            dataOnline (data);
             if(storeLocally){
                 if([data isKindOfClass:[NSArray class]]){
                     for(NSDictionary*dict in (NSArray*)data){
                         if(self.offlineDataManager){
                             [self.offlineDataManager updateDocWithData:resourceName idDictionary:propertiesDic withProperties:dict onError:^(ChouChouError* error){
-                                if(onError){
-                                    onError(error);
-                                }
+//                                if(onError){
+//                                    onError(error);
+//                                }
                             }onSuccess:^(NSDictionary* dataDict){
                                 if(dataOffline){
                                     dataOffline(dataDict);
@@ -390,9 +395,9 @@ static ChouChouKit *_chouInstance = nil;
                 }else if ([data isKindOfClass:[NSDictionary class]]){
                     if(self.offlineDataManager){
                         [self.offlineDataManager updateDocWithData:resourceName idDictionary:propertiesDic withProperties:(NSDictionary*)data onError:^(ChouChouError* error){
-                            if(onError){
-                                onError(error);
-                            }
+//                            if(onError){
+//                                onError(error);
+//                            }
                         }onSuccess:^(NSDictionary* dataDict){
                             if(dataOffline){
                                 dataOffline(dataDict);
@@ -401,6 +406,7 @@ static ChouChouKit *_chouInstance = nil;
                     }
                 }
             }
+            dataOnline (data);
         }];
     }
     @catch (NSException *exception) {
@@ -508,8 +514,7 @@ static ChouChouKit *_chouInstance = nil;
         
         [self getResourceByID:resourceName withProperties:getIDDic storeLocally:storeLocally onError:^(ChouChouError *error) {
             // Server error
-            if (error.urlResponse && ([error.urlResponse statusCode] == 404)) {
-                // If response is 404 it means resource is not found in server. Post it to create data.
+            if (onError) {
                 [self postResource:resourceName postDic:propertiesDic storeLocally:storeLocally onError:^(ChouChouError *error) {
                     if(onError){
                         [self locallyBlindStoreResourceByID:resourceName idDict:getIDDic updateDict:propertiesDic storeLocally:storeLocally forError:error onDone:^{
@@ -522,22 +527,7 @@ static ChouChouKit *_chouInstance = nil;
                     }
                 }];
             }
-            else{
-                if (onError) {
-                    onError(error);
-                    [self postResource:resourceName postDic:propertiesDic storeLocally:storeLocally onError:^(ChouChouError *error) {
-                        if(onError){
-                            [self locallyBlindStoreResourceByID:resourceName idDict:getIDDic updateDict:propertiesDic storeLocally:storeLocally forError:error onDone:^{
-                                onError(error);
-                            }];
-                        }
-                    } onSuccess:^(NSDictionary *onlineData) {
-                        if(onSuccess){
-                            onSuccess(onlineData);
-                        }
-                    }];
-                }
-            }
+            
         } dataOffline:^(NSDictionary*offlineData) {
             // We dont need offline data
         } dataOnline:^(NSDictionary*onlineData) {
