@@ -26,20 +26,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // It is best if you instantiate ChouChou Kit in AppDelegate
     
-    [ChouChouKit initiateChouChou:keyForApp server:server_address storageType:CHOU_STORE_COUCHBASE_LITE debug:CHOU_DEBUG_FULL];
+    // It is best if you instantiate ChouChou Kit in AppDelegate
     [self checkKeyAndServerAreSet:self.navigationItem.rightBarButtonItem];
     
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if(!_arrayOfSampleItemObjects){
+        _arrayOfSampleItemObjects = [NSMutableArray new];
+    }
+
+}
+
 -(void) syncObjectsFromServer{
-    NSDictionary *propertiesDictionary = @{@"name":@"nameofobject"};
+    
+    NSDictionary *propertiesDictionary = @{@"id_goibibo":@"GOHTLDV360c741396447843"};    
+    
     [SampleObject getAllObjectsFromServerForProperties:propertiesDictionary storeLocally:NO onError:^(ChouChouError *error) {
         NSLog(@"%@",error.userInfo);
     } onSuccess:^(NSArray * sampleObjectArray) {
-        _arrayOfSampleItemObjects = [[NSMutableArray alloc]initWithArray:sampleObjectArray];
-        [self.tableView reloadData];
+        for(NSDictionary *dict in sampleObjectArray){
+            SampleObject *sObject = [[SampleObject alloc] initWithDictionary:dict];
+            
+            [_arrayOfSampleItemObjects addObject:sObject];
+            [self.tableView reloadData];
+        }
     }];
 
 }
@@ -50,6 +63,7 @@
                                     message:@"Please Set App key and server URL in the app delegate file prior to loading data from your server"
                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
     }else{
+        [ChouChouKit initiateChouChou:keyForApp server:server_address storageType:CHOU_STORE_COUCHBASE_LITE debug:CHOU_DEBUG_FULL];
         [self syncObjectsFromServer];
     }
 }

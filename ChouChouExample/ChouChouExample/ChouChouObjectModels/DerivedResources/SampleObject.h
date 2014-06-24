@@ -15,7 +15,7 @@
 @property (nonatomic,strong)  NSString              *name;
 @property (nonatomic,strong)  NSString              *contenttype;
 @property (nonatomic,strong)  NSDate                *timestamp;
-@property (nonatomic, strong) NSMutableDictionary   *data;
+@property (nonatomic,strong)  NSMutableDictionary   *data;
 
 
 /** Updates the "data" array in SampleObject dictionary with the array of objects being passed 
@@ -36,6 +36,7 @@
 
 +(SampleObject*) createSampleObjectForPostWithProperties :(NSDictionary*)propertyDict
                                                  onError:(void(^)(ChouChouError*))onError;
+
 
 -(void) postSampleObjectToServer:(SampleObject*)sampleObject storeLocally:(BOOL)storeLocally
                       onError:(void(^)(ChouChouError*))onError

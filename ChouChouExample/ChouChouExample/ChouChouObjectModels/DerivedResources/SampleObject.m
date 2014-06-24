@@ -13,12 +13,25 @@
 @implementation SampleObject
 
 
+-(NSString*) name{
+    return self.contentData[@"title"];
+}
+
+/** 
+ Override docname property to refer to type of document being accessed
+ */
+
+-(NSString*) docName{
+    return @"sampleobjecttype";
+}
+
 -(NSString*) contenttype{
     if(self.data[@"contenttype"] && [(NSString*)self.data[@"contenttype"] length]){
         return self.data[@"contenttype"];
     }
-    return @"sampleobject";
+    return self.docName;
 }
+
 -(void) setContenttype:(NSString *)contenttype{
     [self.data setObjectNilHandled:contenttype forKey:@"contenttype"];
 }
@@ -76,7 +89,7 @@
                           onError:(void(^)(ChouChouError*))onError
                         onSuccess:(void(^)(BOOL))onSuccess{
     
-    [self deleteResourceByID:[self syncUniqueKeysDictionary] onError:onError onSuccess:onSuccess];
+    [self deleteResourceByID:self.contentData[@"id"] onError:onError onSuccess:onSuccess];
 }
 
 //General Merge Logic
