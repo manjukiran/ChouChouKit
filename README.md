@@ -25,6 +25,7 @@ I) If you've downloaded the source code and have not customized the the sourceco
 	4)	Link `ChouChouKit.framework` in "Link Binary with Libraries" and add `libChouChouKit.a` to your project's target dependency.
 
 II) Linking Project's sourcecode directly to your project
+
 	1) Drag and drop the `ChouChouKit.xcodeproj` file to your project directly.
 	2) Modify the project/sourcecode if needed.
 	3)	Link `ChouChouKit.framework` in "Link Binary with Libraries" and add `libChouChouKit.a` to your project's target dependency.
