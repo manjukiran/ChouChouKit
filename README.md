@@ -17,21 +17,18 @@ You can achieve this in two ways
 
 I) If you've downloaded the source code and have not customized the the sourcecode
 
-	1) Open the source code project "ChouChouKit.xcodeproj".
-	2) Set the build target to "ChouChouKit_Other" in the top left panel of Xcode.
+	1) Open the source code project `ChouChouKit.xcodeproj`.
+	2) Set the build target to `ChouChouKit_Other` in the top left panel of Xcode.
 	3) Run the project, which will produce two files
-		a) libChouChouKit.a  (visible in the "Products" group of the project in the left panel)
-		b) ChouChouKit.framework (right click on the 'libChouChouKit.a' file and select 'Show in Finder'. You will find this file in the same folder )
-	4)	Link ChouChouKit.framework in "Link Binary with Libraries" and add "libChouChouKit.a" to your project's target dependency.
+		a) `libChouChouKit.a`  (visible in the "Products" group of the project in the left panel)
+		b) `ChouChouKit.framework` (right click on the 'libChouChouKit.a' file and select 'Show in Finder'. You will find this file in the same folder )
+	4)	Link `ChouChouKit.framework` in "Link Binary with Libraries" and add `libChouChouKit.a` to your project's target dependency.
 
 II) Linking Project's sourcecode directly to your project
-	1) Drag and drop the ChouChouKit.xcodeproj file to your project directly.
+	1) Drag and drop the `ChouChouKit.xcodeproj` file to your project directly.
 	2) Modify the project/sourcecode if needed.
-	3)	Link ChouChouKit.framework in "Link Binary with Libraries" and add "libChouChouKit.a" to your project's target dependency.
+	3)	Link `ChouChouKit.framework` in "Link Binary with Libraries" and add `libChouChouKit.a` to your project's target dependency.
 
-
-
-Once you have added the `.h/m` files to your project, simply:
 
 * Go to the `Project->TARGETS->Build Phases->Link Binary With Libraries`.
 * Press the plus in the lower left of the list.
@@ -65,4 +62,4 @@ As with every data communication framework, ChouChouKit provides mechanisms to r
 
 ## Tell the world
 
-Head over to  [Projects using ChouChouKit] (https://github.com/goibibo/ChouChouKit) and let us know how you feel about our framework and how we can enhance this.
+Head over to  [ChouChouKit : Github Repo] (https://github.com/goibibo/ChouChouKit) and let us know how you feel about our framework and how we can enhance this.
