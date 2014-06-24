@@ -606,7 +606,9 @@ static ChouChouKit *_chouInstance = nil;
         
         __block ChouChouUrlConnection  *urlConn = [[ChouChouUrlConnection alloc] init];
         [urlConn startAsyncConnection:resourceName connectionType:CHOU_CONN_POST getDic:nil postDic:postDic autoConvertJson:YES onDidntStart:^(ChouChouError *error){
+            if(onError){
             onError(error);
+            }
             urlConn = nil;
         } errorBlock:^(NSError *error) {
             onError([ChouChouError chouchouErrorWithNetworkError:error]);
@@ -630,9 +632,10 @@ static ChouChouKit *_chouInstance = nil;
                             onError(postError);
                         }
                     } onSuccess:^(NSDictionary* postedData){
-                        if (onSuccess) {
-                            onSuccess(postedData);
-                        }
+                        // Online Data is already retuned earlier, no need to call this again.
+//                        if (onSuccess) {
+//                            onSuccess(postedData);
+//                        }
                     }];
                 }
             }
@@ -691,6 +694,10 @@ static ChouChouKit *_chouInstance = nil;
        
         //Make the request finally
         NSDictionary* identifierDict = @{@"identifier": identifierType};
+        if(postDic[@"id"]){
+            identifierDict = @{@"id": postDic[@"id"]};
+        }
+        
         __block ChouChouUrlConnection  *urlConn = [[ChouChouUrlConnection alloc] init];
         [urlConn startAsyncConnection:resourceName connectionType:CHOU_CONN_PUT getDic:identifierDict postDic:postDic autoConvertJson:YES onDidntStart:^(ChouChouError *error){
             [self locallyBlindStoreResourceByID:resourceName idDict:getIDDic updateDict:postDic storeLocally:storeLocally forError:error onDone:^{

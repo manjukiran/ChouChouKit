@@ -213,9 +213,13 @@
     
     [self getResourcewithSyncDict:propertiesDict storeLocally:storeLocally onError:onError dataOffline:offlineData dataOnline:^(id onlineData) {
         if([onlineData isKindOfClass:[NSArray class]]){
+                    if(onSuccess){
             onSuccess(onlineData);
+                    }
         }else if([onlineData isKindOfClass:[NSDictionary class]]){
+                    if(onSuccess){
             onSuccess([NSArray arrayWithObject:onlineData]);
+                    }
         }
     }];
 }

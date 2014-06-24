@@ -60,9 +60,13 @@
         for (CBLQueryRow* row in [query run:&getError]) {
             NSLog(@"%@",row.document.properties);
         }
+        if(onSuccess){
         onSuccess(YES);
+        }
     }else{
+        if(onError){
         onError(error);
+        }
     }
 }
 
@@ -75,9 +79,13 @@
     CBLDocument *doc = [self.localDatabase createDocument];
     NSError *putError=nil;
     if(![doc putProperties:dataDictionary error:&putError]){
+        if(onError){
         onError([ChouChouError chouchouErrorWithCouchBaseError:putError]);
+        }
     }else{
+        if(onSuccess){
         onSuccess(dataDictionary);
+        }
     }
 }
 
@@ -98,10 +106,14 @@
         }
     }
     if(dataArray.count >0){
+                if(onSuccess){
         onSuccess(dataArray);
+                }
     }else{
         NSError *locError = [[NSError alloc] initWithDomain:@"Database Error" code:404 userInfo:@{@"message": @"No matching data found locally"}];
+        if(onError){
         onError([ChouChouError chouchouErrorWithCouchBaseError:locError]);
+        }
     }
 }
 
@@ -129,10 +141,14 @@
                     [doc deleteDocument:&updateError];
                     doc = [self.localDatabase documentWithID:docID];
                     if(![doc putProperties:editedDict error:&updateError]){
+                        if(onError){
                         onError([ChouChouError chouchouErrorWithCouchBaseError:updateError]);
+                        }
                     }
                 }
-                onSuccess(rowDict);
+                if(onSuccess){
+                    onSuccess(rowDict);
+                }
                 break;
             }
         }
@@ -140,11 +156,15 @@
     if(!exactMatchFound){
         [self createDocWithData:docName withProperties:propertiesDict onError:^(NSError * error) {
             NSError *locError = [[NSError alloc] initWithDomain:@"Database Error" code:404 userInfo:@{@"message": @"No matching data found locally"}];
+            if(onError){
             onError([ChouChouError chouchouErrorWithCouchBaseError:locError]);
+            }
         } onSuccess:^(NSDictionary *dataDict) {
             NSLog(@"No Original entry found in Database, creating one newly");
-            onSuccess(dataDict);
-        }];        
+            if(onSuccess){
+                onSuccess(dataDict);
+            }
+        }];
     }
 }
 
@@ -174,9 +194,13 @@
                 CBLDocument *doc = [self.localDatabase documentWithID:rowDict[@"_id"]];
                 NSError *deleteError = nil;
                 if(![doc deleteDocument:&deleteError]){
+                    if(onError){
                     onError([ChouChouError chouchouErrorWithCouchBaseError:deleteError]);
+                    }
                 }else{
+                            if(onSuccess){
                     onSuccess(YES);
+                            }
                 }
                 break;
             }
@@ -185,7 +209,9 @@
     
     if(!exactMatchFound){
         NSError *locError = [[NSError alloc] initWithDomain:@"Database Error" code:404 userInfo:@{@"message": @"No matching data found locally"}];
+        if(onError){
         onError([ChouChouError chouchouErrorWithCouchBaseError:locError]);
+        }
     }
 
 }
@@ -198,7 +224,7 @@
             
         }
         if([sourceDict[sourceKey] isKindOfClass:[NSNumber class]]){
-            if(![sourceDict[sourceKey] isEqualToNumber:destDict[sourceKey]]){
+            if(!([sourceDict[sourceKey] intValue] ==[destDict[sourceKey]intValue])){
                 matchFound = NO;
             }
         }else if([sourceDict[sourceKey] isKindOfClass:[NSString class]]){
