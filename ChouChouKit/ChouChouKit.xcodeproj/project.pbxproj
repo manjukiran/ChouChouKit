@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C202D2B2191A621D00438CE6 /* ChouChouKit_Other */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C202D2B3191A621D00438CE6 /* Build configuration list for PBXAggregateTarget "ChouChouKit_Other" */;
+			buildPhases = (
+				C202D2B8191A62B100438CE6 /* ShellScript */,
+			);
+			dependencies = (
+				C202D2B7191A622400438CE6 /* PBXTargetDependency */,
+			);
+			name = ChouChouKit_Other;
+			productName = otherFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7661C6A0192394A900B7351F /* ChouChouManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7661C69E192394A900B7351F /* ChouChouManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7661C6A1192394A900B7351F /* ChouChouManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7661C69F192394A900B7351F /* ChouChouManagedObject.m */; };
+		7672296F1922487A009EF69E /* ChouChouKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 767229671922487A009EF69E /* ChouChouKit-Prefix.pch */; };
+		76722A2919224EDA009EF69E /* ChouChouKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76722A2719224EDA009EF69E /* ChouChouKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76722A2A19224EDA009EF69E /* ChouChouKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 76722A2819224EDA009EF69E /* ChouChouKit.m */; };
+		76BFD92D191B9E920088F49B /* ChouChou+NSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BFD927191B9E920088F49B /* ChouChou+NSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76BFD92E191B9E920088F49B /* ChouChou+NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BFD928191B9E920088F49B /* ChouChou+NSDictionary.m */; };
+		76BFD92F191B9E920088F49B /* ChouChouLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BFD929191B9E920088F49B /* ChouChouLogger.h */; };
+		76BFD930191B9E920088F49B /* ChouChouLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BFD92A191B9E920088F49B /* ChouChouLogger.m */; };
+		76BFD935191B9EB70088F49B /* ChouChouUrlConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BFD933191B9EB70088F49B /* ChouChouUrlConnection.h */; };
+		76BFD936191B9EB70088F49B /* ChouChouUrlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BFD934191B9EB70088F49B /* ChouChouUrlConnection.m */; };
+		C202D2BD191A646A00438CE6 /* libChouChouKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C202D26A191A52C400438CE6 /* libChouChouKit.a */; };
+		C231646B1924AC7800E288EA /* ChouChouCBLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C23164661924AC7800E288EA /* ChouChouCBLiteManager.h */; };
+		C231646C1924AC7800E288EA /* ChouChouCBLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C23164671924AC7800E288EA /* ChouChouCBLiteManager.m */; };
+		C231646D1924AC7800E288EA /* ChouChouSqliteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C23164691924AC7800E288EA /* ChouChouSqliteManager.h */; };
+		C231646E1924AC7800E288EA /* ChouChouSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C231646A1924AC7800E288EA /* ChouChouSqliteManager.m */; };
+		C23164731924CD7600E288EA /* ChouChouOfflineManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C23164711924CD7600E288EA /* ChouChouOfflineManager.h */; };
+		C23164741924CD7600E288EA /* ChouChouOfflineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C23164721924CD7600E288EA /* ChouChouOfflineManager.m */; };
+		C2493E41192B2F7A00D83FF6 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C2493E3F192B2F7A00D83FF6 /* Reachability.h */; };
+		C2493E42192B2F7A00D83FF6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C2493E40192B2F7A00D83FF6 /* Reachability.m */; };
+		C2F3D1971938DF93002D1950 /* ChouChouError.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F3D1951938DF93002D1950 /* ChouChouError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F3D1981938DF93002D1950 /* ChouChouError.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D1961938DF93002D1950 /* ChouChouError.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C202D280191A52C500438CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C202D262191A52C400438CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C202D269191A52C400438CE6;
+			remoteInfo = ChouChouLite_iOS;
+		};
+		C202D2B6191A622400438CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C202D262191A52C400438CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C202D269191A52C400438CE6;
+			remoteInfo = ChouChouLite_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C202D268191A52C400438CE6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7661C69E192394A900B7351F /* ChouChouManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouManagedObject.h; sourceTree = "<group>"; };
+		7661C69F192394A900B7351F /* ChouChouManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouManagedObject.m; sourceTree = "<group>"; };
+		767229671922487A009EF69E /* ChouChouKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChouChouKit-Prefix.pch"; sourceTree = "<group>"; };
+		76722A2719224EDA009EF69E /* ChouChouKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouKit.h; sourceTree = "<group>"; };
+		76722A2819224EDA009EF69E /* ChouChouKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouKit.m; sourceTree = "<group>"; };
+		76722A2B19224F34009EF69E /* ChouChouKitPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChouChouKitPrivate.h; sourceTree = "<group>"; };
+		76BFD927191B9E920088F49B /* ChouChou+NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChouChou+NSDictionary.h"; sourceTree = "<group>"; };
+		76BFD928191B9E920088F49B /* ChouChou+NSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChouChou+NSDictionary.m"; sourceTree = "<group>"; };
+		76BFD929191B9E920088F49B /* ChouChouLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouLogger.h; sourceTree = "<group>"; };
+		76BFD92A191B9E920088F49B /* ChouChouLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouLogger.m; sourceTree = "<group>"; };
+		76BFD933191B9EB70088F49B /* ChouChouUrlConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouUrlConnection.h; sourceTree = "<group>"; };
+		76BFD934191B9EB70088F49B /* ChouChouUrlConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouUrlConnection.m; sourceTree = "<group>"; };
+		C202D26A191A52C400438CE6 /* libChouChouKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChouChouKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C202D27A191A52C400438CE6 /* ChouChouKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChouChouKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23164661924AC7800E288EA /* ChouChouCBLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouCBLiteManager.h; sourceTree = "<group>"; };
+		C23164671924AC7800E288EA /* ChouChouCBLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouCBLiteManager.m; sourceTree = "<group>"; };
+		C23164691924AC7800E288EA /* ChouChouSqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouSqliteManager.h; sourceTree = "<group>"; };
+		C231646A1924AC7800E288EA /* ChouChouSqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouSqliteManager.m; sourceTree = "<group>"; };
+		C23164711924CD7600E288EA /* ChouChouOfflineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouOfflineManager.h; sourceTree = "<group>"; };
+		C23164721924CD7600E288EA /* ChouChouOfflineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouOfflineManager.m; sourceTree = "<group>"; };
+		C2493E3F192B2F7A00D83FF6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
+		C2493E40192B2F7A00D83FF6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
+		C2F3D1951938DF93002D1950 /* ChouChouError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChouChouError.h; sourceTree = "<group>"; };
+		C2F3D1961938DF93002D1950 /* ChouChouError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChouChouError.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C202D267191A52C400438CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C202D277191A52C400438CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C202D2BD191A646A00438CE6 /* libChouChouKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		767226C419223D92009EF69E /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C2493E43192B2F7E00D83FF6 /* Reachability */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		767229621922487A009EF69E /* ChouChou */ = {
+			isa = PBXGroup;
+			children = (
+				767229671922487A009EF69E /* ChouChouKit-Prefix.pch */,
+			);
+			path = ChouChou;
+			sourceTree = "<group>";
+		};
+		76BFD926191B9E920088F49B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				76722A2719224EDA009EF69E /* ChouChouKit.h */,
+				76722A2B19224F34009EF69E /* ChouChouKitPrivate.h */,
+				76722A2819224EDA009EF69E /* ChouChouKit.m */,
+				C2F3D1951938DF93002D1950 /* ChouChouError.h */,
+				C2F3D1961938DF93002D1950 /* ChouChouError.m */,
+				7661C69E192394A900B7351F /* ChouChouManagedObject.h */,
+				7661C69F192394A900B7351F /* ChouChouManagedObject.m */,
+				76BFD927191B9E920088F49B /* ChouChou+NSDictionary.h */,
+				76BFD928191B9E920088F49B /* ChouChou+NSDictionary.m */,
+				76BFD929191B9E920088F49B /* ChouChouLogger.h */,
+				76BFD92A191B9E920088F49B /* ChouChouLogger.m */,
+				76BFD933191B9EB70088F49B /* ChouChouUrlConnection.h */,
+				76BFD934191B9EB70088F49B /* ChouChouUrlConnection.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C202D261191A52C400438CE6 = {
+			isa = PBXGroup;
+			children = (
+				C23164641924AC7800E288EA /* OfflineDataManager */,
+				76BFD926191B9E920088F49B /* Source */,
+				767229621922487A009EF69E /* ChouChou */,
+				767226C419223D92009EF69E /* vendor */,
+				C202D26C191A52C400438CE6 /* Frameworks */,
+				C202D26B191A52C400438CE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C202D26B191A52C400438CE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C202D26A191A52C400438CE6 /* libChouChouKit.a */,
+				C202D27A191A52C400438CE6 /* ChouChouKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C202D26C191A52C400438CE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C23164641924AC7800E288EA /* OfflineDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C23164711924CD7600E288EA /* ChouChouOfflineManager.h */,
+				C23164721924CD7600E288EA /* ChouChouOfflineManager.m */,
+				C23164651924AC7800E288EA /* CouchBased */,
+				C23164681924AC7800E288EA /* SqliteBased */,
+			);
+			name = OfflineDataManager;
+			path = Source/OfflineDataManager;
+			sourceTree = "<group>";
+		};
+		C23164651924AC7800E288EA /* CouchBased */ = {
+			isa = PBXGroup;
+			children = (
+				C23164661924AC7800E288EA /* ChouChouCBLiteManager.h */,
+				C23164671924AC7800E288EA /* ChouChouCBLiteManager.m */,
+			);
+			path = CouchBased;
+			sourceTree = "<group>";
+		};
+		C23164681924AC7800E288EA /* SqliteBased */ = {
+			isa = PBXGroup;
+			children = (
+				C23164691924AC7800E288EA /* ChouChouSqliteManager.h */,
+				C231646A1924AC7800E288EA /* ChouChouSqliteManager.m */,
+			);
+			path = SqliteBased;
+			sourceTree = "<group>";
+		};
+		C2493E43192B2F7E00D83FF6 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C2493E3F192B2F7A00D83FF6 /* Reachability.h */,
+				C2493E40192B2F7A00D83FF6 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C202D2A4191A5E1A00438CE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23164731924CD7600E288EA /* ChouChouOfflineManager.h in Headers */,
+				76722A2919224EDA009EF69E /* ChouChouKit.h in Headers */,
+				C2F3D1971938DF93002D1950 /* ChouChouError.h in Headers */,
+				76BFD92D191B9E920088F49B /* ChouChou+NSDictionary.h in Headers */,
+				7661C6A0192394A900B7351F /* ChouChouManagedObject.h in Headers */,
+				7672296F1922487A009EF69E /* ChouChouKit-Prefix.pch in Headers */,
+				C2493E41192B2F7A00D83FF6 /* Reachability.h in Headers */,
+				76BFD92F191B9E920088F49B /* ChouChouLogger.h in Headers */,
+				76BFD935191B9EB70088F49B /* ChouChouUrlConnection.h in Headers */,
+				C231646B1924AC7800E288EA /* ChouChouCBLiteManager.h in Headers */,
+				C231646D1924AC7800E288EA /* ChouChouSqliteManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C202D269191A52C400438CE6 /* ChouChouKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C202D28D191A52C500438CE6 /* Build configuration list for PBXNativeTarget "ChouChouKit" */;
+			buildPhases = (
+				C202D266191A52C400438CE6 /* Sources */,
+				C202D267191A52C400438CE6 /* Frameworks */,
+				C202D268191A52C400438CE6 /* CopyFiles */,
+				C202D2A4191A5E1A00438CE6 /* Headers */,
+				C202D2B1191A61B400438CE6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChouChouKit;
+			productName = ChouChouLite_iOS;
+			productReference = C202D26A191A52C400438CE6 /* libChouChouKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C202D279191A52C400438CE6 /* ChouChouKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C202D290191A52C500438CE6 /* Build configuration list for PBXNativeTarget "ChouChouKitTests" */;
+			buildPhases = (
+				C202D276191A52C400438CE6 /* Sources */,
+				C202D277191A52C400438CE6 /* Frameworks */,
+				C202D278191A52C400438CE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C202D281191A52C500438CE6 /* PBXTargetDependency */,
+			);
+			name = ChouChouKitTests;
+			productName = ChouChouLite_iOSTests;
+			productReference = C202D27A191A52C400438CE6 /* ChouChouKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C202D262191A52C400438CE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = goIbibo;
+			};
+			buildConfigurationList = C202D265191A52C400438CE6 /* Build configuration list for PBXProject "ChouChouKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C202D261191A52C400438CE6;
+			productRefGroup = C202D26B191A52C400438CE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C202D269191A52C400438CE6 /* ChouChouKit */,
+				C202D279191A52C400438CE6 /* ChouChouKitTests */,
+				C202D2B2191A621D00438CE6 /* ChouChouKit_Other */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C202D278191A52C400438CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C202D2B1191A61B400438CE6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"";
+		};
+		C202D2B8191A62B100438CE6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C202D266191A52C400438CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C231646E1924AC7800E288EA /* ChouChouSqliteManager.m in Sources */,
+				76722A2A19224EDA009EF69E /* ChouChouKit.m in Sources */,
+				C23164741924CD7600E288EA /* ChouChouOfflineManager.m in Sources */,
+				7661C6A1192394A900B7351F /* ChouChouManagedObject.m in Sources */,
+				C231646C1924AC7800E288EA /* ChouChouCBLiteManager.m in Sources */,
+				76BFD936191B9EB70088F49B /* ChouChouUrlConnection.m in Sources */,
+				C2F3D1981938DF93002D1950 /* ChouChouError.m in Sources */,
+				76BFD92E191B9E920088F49B /* ChouChou+NSDictionary.m in Sources */,
+				C2493E42192B2F7A00D83FF6 /* Reachability.m in Sources */,
+				76BFD930191B9E920088F49B /* ChouChouLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C202D276191A52C400438CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C202D281191A52C500438CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C202D269191A52C400438CE6 /* ChouChouKit */;
+			targetProxy = C202D280191A52C500438CE6 /* PBXContainerItemProxy */;
+		};
+		C202D2B7191A622400438CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C202D269191A52C400438CE6 /* ChouChouKit */;
+			targetProxy = C202D2B6191A622400438CE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C202D28B191A52C500438CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		C202D28C191A52C500438CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C202D28E191A52C500438CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DSTROOT = /tmp/ChouChouLite_iOS.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChouChou/ChouChouKit-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ChouChouKit;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		C202D28F191A52C500438CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DSTROOT = /tmp/ChouChouLite_iOS.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChouChou/ChouChouKit-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ChouChouKit;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Release;
+		};
+		C202D291191A52C500438CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChouChouLite_iOS/ChouChouLite_iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ChouChouLite_iOSTests/ChouChouiOSTests-Info.plist";
+				PRODUCT_NAME = ChouChouKitTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C202D292191A52C500438CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChouChouLite_iOS/ChouChouLite_iOS-Prefix.pch";
+				INFOPLIST_FILE = "ChouChouLite_iOSTests/ChouChouiOSTests-Info.plist";
+				PRODUCT_NAME = ChouChouKitTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C202D2B4191A621D00438CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ChouChouKit_Other;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		C202D2B5191A621D00438CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ChouChouKit_Other;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C202D265191A52C400438CE6 /* Build configuration list for PBXProject "ChouChouKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C202D28B191A52C500438CE6 /* Debug */,
+				C202D28C191A52C500438CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C202D28D191A52C500438CE6 /* Build configuration list for PBXNativeTarget "ChouChouKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C202D28E191A52C500438CE6 /* Debug */,
+				C202D28F191A52C500438CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C202D290191A52C500438CE6 /* Build configuration list for PBXNativeTarget "ChouChouKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C202D291191A52C500438CE6 /* Debug */,
+				C202D292191A52C500438CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C202D2B3191A621D00438CE6 /* Build configuration list for PBXAggregateTarget "ChouChouKit_Other" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C202D2B4191A621D00438CE6 /* Debug */,
+				C202D2B5191A621D00438CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C202D262191A52C400438CE6 /* Project object */;
+}

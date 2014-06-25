@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF6F4924-00F2-451A-866E-17777F77CC43</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChouChouKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AA52CD00-09F3-4504-9B7F-A270F99162B4</key>
+		<string>https://bitbucket.org/manjukiran_goibibo/chouchoukit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ChouChouKit/ChouChouKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AA52CD00-09F3-4504-9B7F-A270F99162B4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/manjukiran_goibibo/chouchoukit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AA52CD00-09F3-4504-9B7F-A270F99162B4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AA52CD00-09F3-4504-9B7F-A270F99162B4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ChouChou Kit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
