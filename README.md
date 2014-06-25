@@ -47,6 +47,11 @@ Boom, you're done.
 
 In your AppDelegate.m , you will need to instantiate ChouChouKit to set the URL where the BAAS has been deployed, the key for your app and offline storage mechanism **
 
+You will need to call
+	[ChouChouKit initiateChouChou:<INSERT_APP_KEY_HERE> server:<SERVER_URL> storageType:<STORAGE_TYPE> debug:CHOU_DEBUG_FULL];
+
+in your `AppDelegate.m` file. Once initiated, you can directly use your `ChouChouManagedObject` derived class instances to do your operations.
+
 ## Offline Storage
 
 Offline Storage mechanism : Currently the offline storage is available using the CouchBaseLite format. Developers can extend this further by having their own storage mediums and methods. All such classes need to derive from ChouChouKit's "OfflineDataManager" class.
