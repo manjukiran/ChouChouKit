@@ -69,3 +69,15 @@ As with every data communication framework, ChouChouKit provides mechanisms to r
 ## Tell the world
 
 Head over to  [ChouChouKit : Github Repo] (https://github.com/goibibo/ChouChouKit) and let us know how you feel about our framework and how we can enhance this.
+
+
+## Credits
+Thank you, [Rithish](https://github.com/rithish) and [Vikalp](https://github.com/vikalp), for your support and ideas.
+
+## Contributors
+[R Manju Kiran](https://github.com/manjukiran), [Sourabh Verma](https://github.com/sourabhverma)
+
+## License
+Copyright (c) 2013-2014 Ibibo Group
+
+Published under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
