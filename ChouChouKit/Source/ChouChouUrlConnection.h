@@ -1,9 +1,9 @@
 //
 //  ChouChouUrlConnection.h
-//  ChouChouLite_iOS
+//  ChouChouKit
 //
 //  Created by Sourabh Verma on 08/05/14.
-//  Copyright (c) 2014 goIbibo. All rights reserved.
+//  Copyright (c) 2014 ibibo Web Pvt. Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,7 +3,7 @@
 //  ChouChouKit
 //
 //  Created by R Manju Kiran on 14/05/14.
-//  Copyright (c) 2014 goIbibo. All rights reserved.
+//  Copyright (c) 2014 ibibo Web Pvt. Ltd. All rights reserved.
 //
 
 #import "ChouChouManagedObject.h"

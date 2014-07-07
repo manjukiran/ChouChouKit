@@ -1,6 +1,6 @@
 //
-//  Dictionary+PayU.m
-//  Goibibo
+//  ChouChou+NSDictionary
+//  ChouChouKit
 //
 //  Created by Sourabh Verma on 28/01/14.
 //  Copyright (c) 2014 ibibo Web Pvt Ltd. All rights reserved.

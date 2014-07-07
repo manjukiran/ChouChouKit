@@ -1,9 +1,9 @@
 //
 //  ChouChouKitPrivate.h
-//  ChouChouLite_iOS
+//  ChouChouKit
 //
-//  Created by R Manju Kiran on 08/05/14.
-//  Copyright (c) 2014 goIbibo. All rights reserved.
+//  Created by Sourabh Verma on 08/05/14.
+//  Copyright (c) 2014 ibibo Web Pvt. Ltd. All rights reserved.
 //
 
 #ifndef ChouChouLite_iOS_ChouChouKitPrivate_h

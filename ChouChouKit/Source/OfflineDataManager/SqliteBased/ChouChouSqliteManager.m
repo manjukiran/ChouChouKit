@@ -2,8 +2,8 @@
 //  ChouChouSqliteManager.m
 //  ChouChouKit
 //
-//  Created by R Manju Kiran on 15/05/14.
-//  Copyright (c) 2014 goIbibo. All rights reserved.
+//  Created by Sourabh Verma on 15/05/14.
+//  Copyright (c) 2014 ibibo Web Pvt. Ltd. All rights reserved.
 //
 
 #import "ChouChouSqliteManager.h"

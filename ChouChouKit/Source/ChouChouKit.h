@@ -3,7 +3,7 @@
 //  ChouChouNative
 //
 //  Created by R Manju Kiran on 06/05/14.
-//  Copyright (c) 2014 ibibo group. All rights reserved.
+//  Copyright (c) 2014 ibibo Web Pvt. Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
