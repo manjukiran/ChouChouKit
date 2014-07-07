@@ -75,7 +75,7 @@ Head over to  [ChouChouKit : Github Repo] (https://github.com/goibibo/ChouChouKi
 Thank you, [Rithish](https://github.com/rithish) and [Vikalp](https://github.com/vikalp), for your support and ideas.
 
 ## Contributors
-[R Manju Kiran](https://github.com/manjukiran), [Sourabh Verma](https://github.com/sourabhverma)
+[Sourabh Verma](https://github.com/sourabhverma), [R Manju Kiran](https://github.com/manjukiran)
 
 ## License
 Copyright (c) 2013-2014 Ibibo Group
